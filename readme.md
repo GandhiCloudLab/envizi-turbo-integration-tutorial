@@ -6,11 +6,10 @@ This document explains the step-by-step instructions to pull green IT data from 
 
 - [1. Prerequisite](#1-Prerequisite)
 - [2. Architecture](#2-Architecture)
-- [3. PreConfiguration ](#3-PreConfiguration)
-- [4. Create Connectors](#4-Create-Connectors)
-- [5. Import the Flows - Locations](#5-Import-the-Flows---Locations)
-- [6. Import the Flows - Accounts](#6-Import-the-Flows---Accounts)
-- [7. Execution](#7-Execution)
+- [3. Turbonomic Configuration ](#3-Turbonomic-Configuration)
+- [4. Envizi's S3 bucket ](#4-Envizi-s-S3-bucket)
+- [5. App Connect Configuration](#5-App-Connect-Configuration)
+- [6. AppConnect flow Execution](#6-AppConnect-flow-Execution)
 
 ## 1. Prerequisite
 
@@ -26,15 +25,13 @@ We need to create App Connect flow that pulls the list of Cloud Regions and On-p
 
 <img src="images/arch.png">
 
-## 3. PreConfiguration
+## 3. Turbonomic Configuration
 
-### 3.1. Turbonomic configuration
-
-#### Mandatory Configuraiton
+### Mandatory Configuraiton
 
 - Create a user with `Observer` role in Turbo. AppConnect needs this user to fetch data from Turbo. 
 
-#### Optional Configuration 
+### Optional Configuration 
 
 - Add the following Tag in vCenter and add their values as tags to the Data Centers for accurate emission calculations from Envizi:
     - `Country`: Name of Country
@@ -47,21 +44,21 @@ We need to create App Connect flow that pulls the list of Cloud Regions and On-p
 
 **Note:** Tags sync from vCenter to Turbonomic might take upto 20 minutes.
 
-### 3.2. App Connect Configuraiton
-
-There is no special configuration needed.
-
-### 3.3. Envizi's S3 bucket 
+## 4. Envizi's S3 bucket 
 
 Envizi product team would have created and shared S3 bucket. This S3 bucket details to be feed into the AppConnect flow.
 
 The App Connect flow pulls the data from Turbo and sends it S3 bucket in a CSV file. Envizi will further process this CSV file.
 
-## 4. Create Connectors
+## 5. App Connect Configuration
+
+There is no special configuration needed.
+
+### 5.1. Create Connectors
 
 Need to create Amazon S3 connector and 2 HTTP connectors.
 
-#### 4.1. Create Amazon S3 Connector
+#### 5.1.1. Create Amazon S3 Connector
 
 Need to create `Amazon S3` connector. 
 
@@ -80,7 +77,7 @@ Access key ID : AKXXXXXXXXXXXXXXXXXX
 
 <img src="images/01-connector-3.png">
 
-#### 4.2. Create Http Connector 1
+#### 5.1.2. Create Http Connector 1
 
 1. Type `http` in the filter
 
@@ -104,7 +101,7 @@ Access key ID : AKXXXXXXXXXXXXXXXXXX
 <img src="images/01-connector-7-1-1.png">
 
 
-#### 4.3. Create Http Connector 2
+#### 5.1.3. Create Http Connector 2
 
 1. Click on `Http Connector > Add a New Account` 
 
@@ -121,11 +118,11 @@ Access key ID : AKXXXXXXXXXXXXXXXXXX
 
 <img src="images/01-connector-7-4.png">
 
-## 5. Import the Flows - Locations
+### 5.2. Import the Flows - Locations
 
 Need to import the flow and configure connector, variables and schedule.
 
-#### 5.1. Import the flow
+#### 5.2.1. Import the flow
 
 1. Click on `Dashboard > Import Flow` 
 
@@ -146,7 +143,7 @@ Need to import the flow and configure connector, variables and schedule.
 
 <img src="images/02-flow-3.png">
 
-#### 5.2. Set Http Connector 1
+#### 5.2.2 Set Http Connector 1
 
 1. Click on `HTTP` node with the label `Invoke Method`. The details are displayed in the bottom. 
 
@@ -156,7 +153,7 @@ Need to import the flow and configure connector, variables and schedule.
 
 <img src="images/03-flow-http2.png">
 
-#### 5.3. Set Http Connector 2
+#### 5.2.3 Set Http Connector 2
 
 1. Click on `HTTP` node with the label `Invoke Method 2` and the details are displayed in the bottom. 
 
@@ -166,13 +163,13 @@ Need to import the flow and configure connector, variables and schedule.
 
 <img src="images/03-flow-http3-2.png">
 
-#### 5.4. Set Http Connector 3
+#### 5.2.4. Set Http Connector 3
 
 1. Click on `HTTP` node with the label `Invoke Method 3` and select the second http account (Account 4) for this also. 
 
 <img src="images/03-flow-http3-3.png">
 
-#### 5.5. Set S3 Connector
+#### 5.2.5. Set S3 Connector
 
 1. Here is the sample S3 bucket name called `envizi-data-load` created and available. This should have been given by Envizi.
 
@@ -186,7 +183,7 @@ Need to import the flow and configure connector, variables and schedule.
 
 <img src="images/04-flow-s3-3.png">
 
-#### 5.6. Set Variables
+#### 5.2.6. Set Variables
 
 1. Click on `Set Variable` node and the details are displayed in the bottom. 
 
@@ -195,7 +192,7 @@ Need to import the flow and configure connector, variables and schedule.
 
 <img src="images/05-flow-variable.png">
 
-#### 5.7. Set Scheduler
+#### 5.2.7. Set Scheduler
 
 1. Click on `Scheduler` node and the details are displayed in the bottom. 
 
@@ -205,15 +202,15 @@ Need to import the flow and configure connector, variables and schedule.
 
 <img src="images/06-flow-schedule.png">
 
-#### 5.8. Dashboard
+#### 5.2.8. Dashboard
 
 The flow is created and available.
 
 <img src="images/07-flow-dashboard.png">
 
-## 6. Import the Flows - Accounts
+## 5.3. Import the Flows - Accounts
 
-#### 6.1. Import the flow
+#### 5.3.1. Import the flow
 
 1. Click on `Dashboard > Import Flow` 
 
@@ -229,7 +226,7 @@ The flow is created and available.
 
 <img src="images/flow2.png">
 
-#### 6.2. Set Http Connector 1
+#### 5.3.2. Set Http Connector 1
 
 1. Click on `HTTP` node with the label `Invoke Method` and the details are displayed in the bottom. 
 
@@ -237,7 +234,7 @@ The flow is created and available.
 
 2. Select the first http account (Account 3) created above.
 
-#### 6.3. Set Http Connector 2, 3 and 4
+#### 5.3.3 Set Http Connector 2, 3 and 4
 
 1. Click on `HTTP` nodes with the labels `Invoke Method 3` , `Invoke Method 2` and `Invoke Method 5`  and the details are displayed in the bottom
 
@@ -247,7 +244,7 @@ The flow is created and available.
 <img src="images/11-flow-http3.png">
 <img src="images/11-flow-http5.png">
 
-#### 6.4. Set S3 connector
+#### 5.3.4. Set S3 connector
 
 1. Click on `Amazon S3` node with the label `Create Object` and the details are displayed in the bottom. 
 
@@ -255,7 +252,7 @@ The flow is created and available.
 
 <img src="images/12-flow-s3-1.png">
 
-#### 6.5. Set Variables
+#### 5.3.5. Set Variables
 
 1. Click on `Set Variable` node and the details are displayed in the bottom. 
 
@@ -266,7 +263,7 @@ The flow is created and available.
 
 <img src="images/13-flow-variable.png">
 
-#### 6.6. Set Scheduler
+#### 5.3.6. Set Scheduler
 
 1. Click on `Scheduler` node and the details are displayed in the bottom. 
 
@@ -276,21 +273,21 @@ The flow is created and available.
 
 <img src="images/14-flow-schedule.png">
 
-#### 6.7. Dashboard
+#### 5.3.7. Dashboard
 
 The flow is created and available.
 
 <img src="images/15-flow-dashboard.png">
 
-## 7. Execution
+## 6. AppConnect flow Execution
 
-#### 7.1. Start the flow
+#### 6.1. Start the flow
 
 1. Right click on the top of the flow tile and start the flow.
 
 <img src="images/16-flow-start.png">
 
-#### 7.2. Data in S3
+#### 6.2. Data in S3
 
 The flows will pull the data from the Turbo and push it to S3. You can see the output like this in S3.
 
@@ -298,11 +295,11 @@ The flows will pull the data from the Turbo and push it to S3. You can see the o
 
 <img src="images/20-s3-2.png">
 
-#### 7.3. Sample Data from S3
+#### 6.3. Sample Data from S3
 
 The sample data is available here.  [Accounts](./files/data/accounts/),  [Locations](./files/data/locations/).
 
-#### 7.4. Processing S3 files in Envizi
+#### 6.4. Processing S3 files in Envizi
 
 The Envizi automatically pull the data from S3 and process it and creates/update the Turbonomic Performance Dashboard as below.
 
