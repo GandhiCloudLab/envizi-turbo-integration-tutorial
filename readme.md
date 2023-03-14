@@ -48,7 +48,7 @@ We need to create App Connect flow that pulls the list of Cloud Regions and On-p
 
 Envizi product team would have created and shared S3 bucket. This S3 bucket details to be feed into the AppConnect flow.
 
-The App Connect flow pulls the data from Turbo and sends it S3 bucket in a CSV file. Envizi will further process this CSV file.
+The App Connect flow pulls the data from Turbo and sends it to S3 bucket in a CSV file format. Envizi will further process this CSV file.
 
 ## 5. App Connect Configuration
 
