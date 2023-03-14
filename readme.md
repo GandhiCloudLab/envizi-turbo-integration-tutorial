@@ -52,8 +52,6 @@ The App Connect flow pulls the data from Turbo and sends it to S3 bucket in a CS
 
 ## 5. App Connect Configuration
 
-There is no special configuration needed.
-
 ### 5.1. Create Connectors
 
 Need to create Amazon S3 connector and 2 HTTP connectors.
