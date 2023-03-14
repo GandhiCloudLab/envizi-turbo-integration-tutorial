@@ -11,9 +11,6 @@ This document explains the step-by-step instructions to pull green IT data from 
 - [5. Import the Flows - Accounts](#5-Import-the-Flows-Accounts)
 - [6. Execution](#Execution)
 
-## 5. Import the Flows - Accounts
-## 6. Execution
-
 ## 1. Prequisite
 
 - Turbonomic v8.6.6 or higher 
