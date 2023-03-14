@@ -100,7 +100,7 @@ Need to import the flow and configure connector, variables and schedule.
 <img src="images/02-flow-1.png">
 
 2. Download the flow file [TurbonomicLocations.yaml](./files/appconnect-flows/TurbonomicLocations.yaml)
-. The base version of the file is available [here](https://github.com/IBM/turbonomic-envizi-appconnect-flows/blob/main/AppConnect%20flows/TurbonomicLocations.yaml)
+. The original version of the file is available [here](https://github.com/IBM/turbonomic-envizi-appconnect-flows/blob/main/AppConnect%20flows/TurbonomicLocations.yaml)
 
 3. Drag and Drop the same file into the given place.
 
@@ -185,7 +185,7 @@ The flow is created and available.
 
 1. Click on `Dashboard > Import Flow` 
 
-2. Download the flow file [TurbonomicAccounts.yaml](./files/appconnect-flows/TurbonomicAccounts.yaml). The base version of the file is available [here] (https://github.com/IBM/turbonomic-envizi-appconnect-flows/blob/main/AppConnect%20flows/TurbonomicAccounts.yaml)
+2. Download the flow file [TurbonomicAccounts.yaml](./files/appconnect-flows/TurbonomicAccounts.yaml). The original version of the file is available [here](https://github.com/IBM/turbonomic-envizi-appconnect-flows/blob/main/AppConnect%20flows/TurbonomicAccounts.yaml)
 
 3. Drag and Drop the same file into the given place.
 
