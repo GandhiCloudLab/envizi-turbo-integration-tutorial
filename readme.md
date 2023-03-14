@@ -5,11 +5,11 @@ This document explains the step-by-step instructions to pull green IT data from 
 ## Contents
 
 - [1. Prequisite](#1-Prequisite)
-- [2. Architecture](#2Architecture)
+- [2. Architecture](#2-Architecture)
 - [3. Create Connectors](#3-Create-Connectors)
 - [4. Import the Flows - Locations](#4-Import-the-Flows-Locations)
 - [5. Import the Flows - Accounts](#5-Import-the-Flows-Accounts)
-- [6. Execution](#Execution)
+- [6. Execution](#6-Execution)
 
 ## 1. Prequisite
 
