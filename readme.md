@@ -7,8 +7,8 @@ This document explains the step-by-step instructions to pull green IT data from 
 - [1. Prequisite](#1-Prequisite)
 - [2. Architecture](#2-Architecture)
 - [3. Create Connectors](#3-Create-Connectors)
-- [4. Import the Flows - Locations](#4-Import-the-Flows-Locations)
-- [5. Import the Flows - Accounts](#5-Import-the-Flows-Accounts)
+- [4. Import the Flows - Locations](#4-Import-the-Flows---Locations)
+- [5. Import the Flows - Accounts](#5-Import-the-Flows---Accounts)
 - [6. Execution](#6-Execution)
 
 ## 1. Prequisite
@@ -101,6 +101,8 @@ Need to import the flow and configure connector, variables and schedule.
 
 2. Download the flow file [TurbonomicLocations.yaml](./files/appconnect-flows/TurbonomicLocations.yaml)
 
+**Note :** This file is copied from [here](https://github.com/IBM/turbonomic-envizi-appconnect-flows/blob/main/AppConnect%20flows/TurbonomicLocations.yaml)
+
 3. Drag and Drop the same file into the given place.
 
 4. Click on `Import`
@@ -185,6 +187,8 @@ The flow is created and available.
 1. Click on `Dashboard > Import Flow` 
 
 2. Download the flow file [TurbonomicAccounts.yaml](./files/appconnect-flows/TurbonomicAccounts.yaml)
+
+**Note :** This file is copied from [here](https://github.com/IBM/turbonomic-envizi-appconnect-flows/blob/main/AppConnect%20flows/TurbonomicAccounts.yaml)
 
 3. Drag and Drop the same file into the given place.
 
