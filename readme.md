@@ -19,15 +19,15 @@ This document explains the step-by-step instructions to pull green IT data from 
 
 ## 2. Architecture
 
-Here is the archiecture that describes about this Turbo and Envizi integration.
+Here is the architecture  that describes about this Turbo and Envizi integration.
 
-We need to create App Connect flow that pulls the list of Cloud Regions and On-prem Data Centers from Turbo and sends it to Envizi's S3 bucket in a CSV file. This CSV file will be further processed by the Envizi internally.
+App Connect flow which pulls the list of Cloud Regions and On-prem Data Centers from Turbo and sends it to Envizi's S3 bucket in a CSV file. This CSV file will be further processed by the Envizi internally.
 
 <img src="images/arch.png">
 
 ## 3. Turbonomic Configuration
 
-### Mandatory Configuraiton
+### Mandatory Configuration
 
 - Create a user with `Observer` role in Turbo. AppConnect needs this user to fetch data from Turbo. 
 
@@ -105,7 +105,7 @@ Access key ID : AKXXXXXXXXXXXXXXXXXX
 
 <img src="images/01-connector-7-1-2.png">
 
-2. Leave all the fileds as it is. 
+2. Leave all the fields as it is. 
 
 <img src="images/01-connector-7-2.png">
 <img src="images/01-connector-7-3.png">
@@ -196,7 +196,7 @@ Need to import the flow and configure connector, variables and schedule.
 
 2. The flow can be configured to run as per our need. Here it is configured to run every day at 00:05 hours.
 
-3. The checkbox `Also run the flow, when it's first swtiched on` to be on, if you want to run the flow immediately after you start the flow.
+3. The checkbox `Also run the flow, when it's first switched on` to be on, if you want to run the flow immediately after you start the flow.
 
 <img src="images/06-flow-schedule.png">
 
