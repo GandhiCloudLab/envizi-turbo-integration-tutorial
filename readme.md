@@ -7,7 +7,7 @@ This document explains the step-by-step instructions to pull green IT data from 
 - [1. Prerequisite](#1-Prerequisite)
 - [2. Architecture](#2-Architecture)
 - [3. Turbonomic Configuration ](#3-Turbonomic-Configuration)
-- [4. Envizi's S3 bucket ](#4-Envizi-s-S3-bucket)
+- [4. Envizi's S3 bucket ](#4-envizis-s3-bucket)
 - [5. App Connect Configuration](#5-App-Connect-Configuration)
 - [6. AppConnect flow Execution](#6-AppConnect-flow-Execution)
 
