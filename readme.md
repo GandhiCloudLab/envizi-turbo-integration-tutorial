@@ -21,7 +21,7 @@ This document explains the step-by-step instructions to pull green IT data from 
 
 Here is the architecture  that describes about this Turbo and Envizi integration.
 
-App Connect flow which pulls the list of Cloud Regions and On-prem Data Centers from Turbo and sends it to Envizi's S3 bucket in a CSV file. This CSV file will be further processed by the Envizi internally.
+App Connect flow pulls the list of Cloud Regions and On-prem Data Centers from Turbo and sends it to Envizi's S3 bucket in a CSV file. This CSV file will be further processed by the Envizi internally.
 
 <img src="images/arch.png">
 
