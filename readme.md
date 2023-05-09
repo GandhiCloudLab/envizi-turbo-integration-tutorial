@@ -318,7 +318,9 @@ The below image shows the details of the file.
 
 1. Shows the sub group called `Turbonomic`
 2. Shows the following subgroups
+
 **CLOUD-Region** : Represents `public cloud` group
+
 **ONPREM-DataCenter** : Represents `On-Prem` Data center group
 
 #### Location
@@ -334,7 +336,7 @@ vc03dc01
 
 #### Location Id
 
-Shows the location id `74374025383097` of the location `HawthorneSales`
+6. Shows the location id `74374025383097` of the location `HawthorneSales`
 
 ### 7.2. Group and Location in Org Hierarchy
 
@@ -344,7 +346,7 @@ The `HawthorneSales` location is shown under the subgroups `Turbonomic  > ONPREM
 2. Shows `ONPREM-DataCenter` sub group
 3. Shows `HawthorneSales` location
 
-<img src="images/02-Group-Location-In-OrgHierarchy.png">
+<img src="images2/02-Group-Location-In-OrgHierarchy.png">
 
 ### 7.3. Accounts and Data
 
@@ -391,7 +393,7 @@ The `HawthorneSales` location is shown under the subgroups `Turbonomic  > ONPREM
 2. Shows location called `HawthorneSales`
 2. Shows account called `HawthorneSales_Active Hosts `
 
-<img src="images/04-Accounts-In-OrgHierarchy.png">
+<img src="images2/04-Accounts-In-OrgHierarchy.png">
 
 ## Reference
 
