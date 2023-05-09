@@ -308,42 +308,31 @@ The Envizi automatically pull the data from S3 and process it and creates/update
 
 ### 7.1. Group and Location
 
-Here is the sample Group and Location [file](./files2/TURBO_Demo Corporation Global_Accounts_1667570021955.csv)
+Here is the sample Group and Location [file](./files2/Accounts.csv)
 
 The below image shows the details of the file.
 
 <img src="images2/01-Group-Location-Data.png">
 
-#### 1.Sub Group
+#### Sub Groups
 
-It shows the sub group called `Turbonomic`
+1. Shows the sub group called `Turbonomic`
+2. Shows the following subgroups
+**CLOUD-Region** : Represents `public cloud` group
+**ONPREM-DataCenter** : Represents `On-Prem` Data center group
 
-#### 2.Sub Groups
+#### Location
 
-It shows the following subgroups
-
-CLOUD-Region : Represents public cloud group
-ONPREM-DataCenter : Represents On-Prem Data center group
-
-#### 3.Location - aws
-
-It shows the `aws` locations
-
-#### 4.Location - azure
-
-It shows the `azure` locations
-
-#### 5.Location - On Prem
-
-It shows the `on-prem` locations such as
-
+3. Shows `aws` locations
+4. Shows `azure` locations
+5. Shows `on-prem` locations such as
 ```
 HawthorneSales
 UCS-DC-10.10.150.38
 vc03dc01
 ```
 
-#### 6.Location Id
+#### Location Id
 
 Shows the location id `74374025383097` of the location `HawthorneSales`
 
@@ -351,29 +340,26 @@ Shows the location id `74374025383097` of the location `HawthorneSales`
 
 The `HawthorneSales` location is shown under the subgroups `Turbonomic  > ONPREM-DataCenter` like the below.
 
-1. It shows the sub group called `Turbonomic`
-2. It shows the sub group called `ONPREM-DataCenter`
-3. It shows the location called `HawthorneSales`
+1. Shows `Turbonomic` sub group
+2. Shows `ONPREM-DataCenter` sub group
+3. Shows `HawthorneSales` location
 
 <img src="images/02-Group-Location-In-OrgHierarchy.png">
 
-
 ### 7.3. Accounts and Data
 
-Here is the sample Accounts [file](./files2/TURBO_Demo Corporation Global_Locations_1666093898435.csv)
+Here is the sample Accounts [file](./files2/Locations.csv)
 
 The below image shows the details of the file.
 
 <img src="images2/03-Accounts-Data.png">
 
 #### Location
-
 1. Shows the account data of the location `vc03dc01` 
 2. Shows the account data of the location `HawthorneSales`
 
 #### Data Type
-
-It shows the below data type
+3. It shows the below `data type`
 ```
     Energy Consumption
     Active Hosts
@@ -383,8 +369,7 @@ It shows the below data type
 ```
 
 #### Account
-
-It shows the below account
+4. It shows the below `account`
 ```
 HawthorneSales_Energy Consumption
 HawthorneSales_Active Hosts
@@ -392,18 +377,19 @@ HawthorneSales_Active VMs
 HawthorneSales_VM host density
 HawthorneSales_Energy Host Intensity
 ```
+
 #### Reading Date
-5. Shows the data for `2022-01-01`
-6. Shows the data for `2022-01-02`
-7. Shows the data for `2022-01-03`
+5. Shows data for `2022-01-01`
+6. Shows data for `2022-01-02`
+7. Shows data for `2022-01-03`
 
 ### 7.4. Account in Org Hierarchy
 
 The `HawthorneSales` location is shown under the subgroups `Turbonomic  > ONPREM-DataCenter` like the below.
 
-1. It shows the sub group called `ONPREM-DataCenter`
-2. It shows the location called `HawthorneSales`
-2. It shows the account called `HawthorneSales_Active Hosts `
+1. Shows sub group called `ONPREM-DataCenter`
+2. Shows location called `HawthorneSales`
+2. Shows account called `HawthorneSales_Active Hosts `
 
 <img src="images/04-Accounts-In-OrgHierarchy.png">
 
