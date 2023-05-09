@@ -315,16 +315,14 @@ The below image shows the details of the file.
 <img src="images2/01-Group-Location-Data.png">
 
 #### Sub Groups
-
 1. Shows the sub group called `Turbonomic`
 2. Shows the following subgroups
-
-**CLOUD-Region** : Represents `public cloud` group
-
-**ONPREM-DataCenter** : Represents `On-Prem` Data center group
+```
+CLOUD-Region : Represents `public cloud` group
+ONPREM-DataCenter : Represents `On-Prem` Data center group
+```
 
 #### Location
-
 3. Shows `aws` locations
 4. Shows `azure` locations
 5. Shows `on-prem` locations such as
@@ -379,11 +377,13 @@ HawthorneSales_Active VMs
 HawthorneSales_VM host density
 HawthorneSales_Energy Host Intensity
 ```
-
 #### Reading Date
 5. Shows data for `2022-01-01`
 6. Shows data for `2022-01-02`
 7. Shows data for `2022-01-03`
+
+#### Quantity
+8. Shows Energy Consumption value `49.72` kWh
 
 ### 7.4. Account in Org Hierarchy
 
